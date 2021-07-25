@@ -4,7 +4,12 @@ import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [ 
   {
-    path:'',
+path: '' ,
+redirectTo: 'search-user', 
+pathMatch: 'full'
+  },
+  {
+    path:'search-user',
     component: SearchComponent
   }
 ];
