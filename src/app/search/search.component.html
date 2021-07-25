@@ -1,6 +1,6 @@
 <div class="container-fluid d-flex justify-content-center">
-    <div class="card d-flex justify-content-center">
-        <div class="card-body">
+    <div class="card mt-5 d-flex justify-content-center">
+        <div class="card-body ">
             <form (ngSubmit)='search($event)' #userForm='ngForm'>
                 <input placeholder="search username ..." class="form-control" name ="searchTerm" [(ngModel)]="searchTerm" (keyup)="search($event)">
             </form>
