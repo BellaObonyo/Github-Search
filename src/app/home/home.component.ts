@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
+import { Repo } from '../repository';
+import { RepoService } from '../repo.service';
+import { UserService } from '../user.service';
+
 
 @Component({
   selector: 'app-home',
@@ -6,10 +11,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  Users!: User;
+  Repos:Repo[]=[]
+  constructor(public userHttpService:UserService) { 
 
-  constructor() { }
-
-  ngOnInit(): void {
   }
 
+  ngOnInit() {
+    this.searchGit("ObonyoCynthia")
+ }
+searchGit(searchTerm: string){
+  this.userHttpService.searchGits(searchTerm).then(
+    (success)=>{
+      this.Users = this.userHttpService.Users;
+    },
+    (error)=>{
+      console.log(error)
+    })
+    this.userHttpService.searchRepos(searchTerm).then(
+            (success)=>{
+            this.Repos=this.userHttpService.Repos
+             
+             
+  
+    })
+  }
 }
