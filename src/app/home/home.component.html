@@ -10,7 +10,7 @@
     </div>
     <div *ngIf='Repos'>
         <div *ngFor='let repo of Repos'>
-            <h3>{{repo.name}}</h3>
+            <h3><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h3>
             <p> {{repo.description}} </p>
 
         </div>
