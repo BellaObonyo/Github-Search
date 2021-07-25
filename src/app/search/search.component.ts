@@ -5,7 +5,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchFormComponent implements OnInit {
+export class SearchComponent implements OnInit {
 @Output() emitSearch = new EventEmitter<any>()
 @Output() isRepo= new EventEmitter<any>()
 
