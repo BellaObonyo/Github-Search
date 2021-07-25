@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { Repo } from '../repo';
-import { UserService } from '../user-service.service';
+import { UserService } from '../user.service';
 
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-username',
+  templateUrl: './username.component.html',
+  styleUrls: ['./username.component.css']
 })
-export class HomeComponent implements OnInit {
+export class UsernameComponent implements OnInit {
   Users!: User;
   Repos:Repo[]=[]
   constructor(public userHttpService:UserService) { 
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.searchGit("ObonyoCynthia")
+    this.searchGit("ngetichnicholas")
  }
 searchGit(searchTerm: string){
   this.userHttpService.searchGits(searchTerm).then(

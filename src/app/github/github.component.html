@@ -1,1 +1,19 @@
-<app-home></app-home>
+<div class="container">
+    <app-search (emitSearch)="searchGit($event)"></app-search><br>
+
+    <div>
+        <img id="avatar" src="{{Users.avatar_url}}" alt="profile pic" height="200px" width="250px">
+        <p>Username: <strong>{{Users.login}}</strong></p>
+        <p>Followers: <strong>{{Users.followers}}</strong></p>
+        <p>Following: <strong>{{Users.followers}}</strong></p>
+        <p>Public Repositories: <strong>{{Users.public_repos}}</strong></p>
+    </div>
+    <div *ngIf='Repos'>
+        <div *ngFor='let repo of Repos'>
+            <h3><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h3>
+            <p> {{repo.description}} </p>
+
+        </div>
+    </div>
+</div>
+
