@@ -1,4 +1,4 @@
-<div class="container-fluid d-flex justify-content-center">
+<!-- <div class="container-fluid d-flex justify-content-center">
    <div class="container  d-flex justify-content-center mt-5">
     <form (ngSubmit)='search($event)' #userForm='ngForm'>
         <input placeholder="search username ..." class="form-control" name ="searchTerm" [(ngModel)]="searchTerm" (keyup)="search($event)">
@@ -7,4 +7,17 @@
         </div>
     </form>
    </div>
-</div>
+</div> -->
+<div class="container-fluid wrapperDiv">
+    <div class="d-flex justify-content-center h-100">
+          <div class="searchbar">
+            <form>
+              <input class="search_input" type="text" placeholder="Enter your github username...">
+              <button class="btn btn-sm btn-success searchButton">search</button>
+
+            </form>
+
+      </div>
+  
+   
+  </div>
