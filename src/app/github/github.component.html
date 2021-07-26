@@ -22,12 +22,12 @@
             <div class="profile-header-cover"></div>
             <div class="profile-header-content">
                 <div class="profile-header-img mb-4">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="mb-4" alt="" />
+                    <img [src]="user.avator_url" class="mb-4" alt="" />
                 </div>
     
                 <div class="profile-header-info">
-                    <h4 class="m-t-sm">Clyde Stanley</h4>
-                    <p class="m-b-sm">UXUI + Frontend Developer</p>
+                    <h4 class="m-t-sm">{{user?.name}}</h4>
+                    <p class="m-b-sm">{{user?.bio}}</p>
                 </div>
             </div>
         </div>
@@ -40,44 +40,18 @@
                             <div class="m-b-10"><b>Repositories</b></div>
     
                         <div class="row">
-                    <div class="col-md-6">
-                        <div class="card shadow"> 
-                            <div class="card-body ">
-                           <h5>Name</h5>
-                           <p>Description</p>
-                
+                    <ng-container *ngFor="let repo of Repos">
+                        <div class="col-md-6">
+                            <div class="card shadow"> 
+                                <div class="card-body ">
+                               <h5>{{repo?.name}}</h5>
+                               <p>{{repo?.description}}</p>
+                    
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card shadow"> 
-                            <div class="card-body ">
-                           <h5>Name</h5>
-                           <p>Description</p>
-                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mt-2">
-                        <div class="card shadow"> 
-                            <div class="card-body ">
-                           <h5>Name</h5>
-                           <p>Description</p>
-                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mt-2">
-                        <div class="card shadow"> 
-                            <div class="card-body ">
-                           <h5>Name</h5>
-                           <p>Description</p>
-                
-                            </div>
-                        </div>
-                    </div>
+                    </ng-container>
 
-                
                         </div>
                 
                     
@@ -88,23 +62,23 @@
                         <li class="title">PERSONAL INFORMATION</li>
                         <li>
                             <div class="field">Twitter:</div>
-                            <div class="value">@bellajectone's</div>
+                            <div class="value">{{user?.twitter_username}}</div>
                         </li>
                         <li>
                             <div class="field">Email:</div>
-                            <div class="value"> cynthia.obonyo@gmail.com</div>
+                            <div class="value">{{user?.email}}</div>
                         </li>
                         <li>
                             <div class="field">Location:</div>
-                            <div class="value">Kisumu</div>
+                            <div class="value">{{user?.location}}</div>
                         </li>
                         <li>
                             <div class="field">followers:</div>
-                            <div class="value">140</div>
+                            <div class="value">{{user?.followers}}</div>
                         </li>
                         <li>
                             <div class="field">following:</div>
-                            <div class="value">145</div>
+                            <div class="value">{{user?.following}}</div>
                         </li>
                         
                     </ul>

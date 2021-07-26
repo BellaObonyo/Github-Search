@@ -15,7 +15,7 @@ pathMatch: 'full'
   },
 
   {
-    path: 'git',
+    path: 'git/:user',
     component: GithubComponent
 
   }

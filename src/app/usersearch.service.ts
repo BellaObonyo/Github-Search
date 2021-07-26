@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UsersearchService {
-  private baseurl ="https://api.github.com/"
+  private baseurl ="https://api.github.com"
 
   constructor(private http:HttpClient)  { 
 
