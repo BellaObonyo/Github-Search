@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GithubComponent } from './github/github.component';
 import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [ 
@@ -11,6 +12,12 @@ pathMatch: 'full'
   {
     path:'search-user',
     component: SearchComponent
+  },
+
+  {
+    path: 'git',
+    component: GithubComponent
+
   }
 ];
 
