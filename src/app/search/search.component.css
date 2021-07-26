@@ -17,14 +17,14 @@
     margin-top: auto;
     height: 50px;
     width: 40%;
-    background-color: #262c09;
+    background-color: rgb(31, 18, 211);
     border-radius: 30px;
     padding: 5px;
   
     }
 
     .search_input{
-    color: rgb(110, 253, 74);
+    color: rgb(253, 74, 104);
     border: 0;
     outline: 0;
     background: none;
