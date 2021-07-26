@@ -11,10 +11,10 @@
 <div class="container-fluid wrapperDiv">
     <div class="d-flex justify-content-center h-100">
           <div class="searchbar">
-            <form>
-              <input class="search_input" type="text" placeholder="Enter your github username...">
+            <form [formGroup]="form">
+              <input formControlName="userInput" class="search_input" type="text" placeholder="Enter your github username...">
               <button class="btn btn-sm btn-outline-primary searchButton">search</button>
-
+              
             </form>
 
       </div>

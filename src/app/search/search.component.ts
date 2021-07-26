@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-search',
@@ -13,6 +14,9 @@ username="";
 
 searchTerm:string;
 
+Form = new FormGroup ({
+  userInput: new FormControl('')
+})
   constructor() { }
 search(event:any){
   this.username = event.target.value
@@ -20,6 +24,9 @@ search(event:any){
   console.log(this.username)
 }
   ngOnInit() {
+  }
+  searchuser() {
+
   }
 
 }
