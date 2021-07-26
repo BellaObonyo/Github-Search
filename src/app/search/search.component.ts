@@ -14,7 +14,7 @@ username="";
 
 searchTerm:string;
 
-Form = new FormGroup ({
+form = new FormGroup ({
   userInput: new FormControl('')
 })
   constructor() { }
@@ -26,7 +26,8 @@ search(event:any){
   ngOnInit() {
   }
   searchuser() {
-
+  let userInput=this.form.value
+  console.log(userInput)
   }
 
 }

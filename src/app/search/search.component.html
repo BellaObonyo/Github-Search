@@ -13,7 +13,7 @@
           <div class="searchbar">
             <form [formGroup]="form">
               <input formControlName="userInput" class="search_input" type="text" placeholder="Enter your github username...">
-              <button class="btn btn-sm btn-outline-primary searchButton">search</button>
+              <button class="btn btn-sm btn-outline-primary searchButton" (click)="searchuser()" >search</button>
               
             </form>
 
